@@ -1,0 +1,250 @@
+title {
+   
+}
+body{
+  font-family: sans-serif;
+  max-width: 1024px;
+  padding: 20px;/*create rectangle around body*/
+                      /* position:center;*/
+  margin: 25px 50px;/* This is a single-line comment */
+}
+.oddtext{
+   
+    font-size:30px; 
+   /* padding: 50px;*/    
+     background-color: bisque;
+     width: 100px;
+    /* margin-left:20px;*/
+    margin-left: 0px;
+    margin-top: 0px;
+    /* border-style: solid;*/
+     border: 6px solid black;
+    /* text-align: center;*/
+    height: 0px;
+    text-align:  center;
+    color:black;
+    margin-top: 0px; 
+    padding-bottom:68px;
+    padding-top: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+   
+    
+   
+}
+header {
+    width: 1024px; 
+    display: flex;/*ddisplay 3 component hrizantal*/
+   /* justify-content: center;
+    align-items: center;
+    align-items: stretch;*/
+  /*  background-color:aquamarine;*/
+    /*height: auto;/*Here effect of background navigation bar*/
+   /* height: 130px;*/
+   
+}
+.nav{
+   
+    list-style-type: none;
+    text-align: center;
+   margin-top: -16px;
+    margin-left:-40px;
+    text-decoration: none;
+}
+.nav li{ float: left;list-style-type:none;
+  /* display:inline-block;
+    font-size: 20px; 
+    padding: 40px;
+     background-color: bisque;
+     width: 100px;
+     border: 5px solid ;
+    margin-left: 0px;  */ 
+}
+.nav li>a{text-decoration-line: none;
+/*add*/
+list-style-type: none;
+display: block;
+background-color: bisque;
+color: black;
+text-align: center;
+padding: 40px;
+text-decoration: none;
+width: 100px;
+border: 5px solid black;
+margin-left: 0px; 
+font-size: 20px; 
+      }
+
+.main{
+   background-color: brown;margin-top: -60px;
+  
+}
+/**try here*/
+
+
+.pagechnage{ 
+    font-size: 20px; 
+    padding: 40px;
+     background-color: bisque;
+     width: 100px; /*float: right;*/ /* position: absolute;*/
+     border: 6px solid black;
+    margin-left: 0px; 
+    text-align: center;
+    text-decoration-line: none;
+    height: 21px;
+    padding-right: 90px;
+    color: black;
+   /* box-sizing: border-box;*/
+  /* box-sizing: content-box;*/
+  
+   
+    }
+.nav li a{ /*margin-left: 0px;float: left;*/ }
+
+footer {
+  
+}
+aside {
+    
+  
+  float:inline-start;
+  font-style: italic;
+  background-color: lightgray;
+ /* padding-top: 80;*/
+ margin-top: -60px;
+/* margin-right: 20px;*/
+    
+  
+}
+/*Grid configuration*/
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'main main main  main  main rights'
+    'footer footer footer footer footer footer';
+   /* width: 1024px; */
+  
+
+   
+}
+
+.top{
+    grid-area: header;height: 113px;
+    background-color:#fff;/*ok*/
+    width: 1024px; 
+   /* background-origin: content-box;*/
+   /*padding: 30;*/
+   }
+   .top>div{ 
+    margin: 0px;
+    padding: 58px;
+    font-size: 20px;
+    
+     }
+.left{ /*child container*/
+   
+    grid-area:main; 
+    text-align: left; 
+    /******for grid make it as subgride******/
+    display: grid;
+    grid-template-areas:
+    ' upps  upps upps  upps  upps  upps'
+    'aleft aleft aleft  aleft aleft aright'
+    'aleft aleft aleft aleft aleft aright'
+   ;
+   background-color: blueviolet;
+   width: 768px;/*This effect just in left*/
+   padding: 20px 0;
+}
+ /*Regards child container*/
+ .upp{ grid-area: upps;padding-bottom: 20px ; margin-left: 10px;}
+.articleleft{grid-area: aleft; margin-left: 10px;}
+.articleright{grid-area: aright;margin-left: 10px;}
+/*End Regards child container*/
+.right{
+    grid-area: rights; 
+    background-color: rgb(49, 36, 61);
+    width: 245px;
+    margin-left: 10px;
+    margin-top: 50px;
+  /*  margin-right: -10px;*/
+   /* margin-right: -20px;*/
+    /*padding-top: 100;*/
+    
+}
+.bottom{
+    grid-area:  footer;  
+    text-align: center;
+    padding: 3px;
+  background-color: DarkSalmon;
+  width: 1024px; 
+}
+.grid-container >.top,.left,.right,.bottom {
+   /* background-color: rgba(255, 255, 255, 0.8); this will make all page with same color*/
+       padding: 60px 0;
+   
+  }
+
+  /*Style for log in page Same prevoius navigationbar(top)&*footer(bottom)*/
+  .middle{ grid-area:  mid; 
+    /*margin-left: 200px; */
+    width:1024px;  ;
+    background-color: beige;
+    /*position arrangement*/
+   /* position:relative;
+    left:200px;
+     top:10px;*/
+         }
+    .logintext{margin-left: 100px;
+         padding:10px ;
+        border-style: solid;
+        border-radius: 8px;
+        text-align:left;
+        margin-right: 100px;
+    }
+    .form{margin-left: 100px;padding:40px ;
+        border-style: solid;
+        border-radius: 12px;
+        margin-right: 100px;
+    }     
+
+   .grid-container2 {
+            display: grid;
+            grid-template-areas:
+            'header header header header header header'
+            'mid mid mid  mid  mid mid'
+            'footer footer footer footer footer footer';
+        }
+        .grid-container >.top,.middle,.bottom {
+            /* background-color: rgba(255, 255, 255, 0.8); this will make all page with same color*/
+                padding: 60px 0;
+               
+           }
+           /*button effect*/
+           .buttonsub{ display: inline-block;
+                        font-size: 15px;
+                        cursor: pointer;
+              text-align: center;
+             text-decoration: none;
+            outline: none;
+           color: #fff;
+          background-color: #4CAF50;
+         border: none;
+        border-radius: 5px;
+       box-shadow: 0 9px #999;
+       padding: 5px 10px;
+                     }
+
+                     .buttonreset{display: inline-block;
+                        font-size: 15px;
+                        cursor: pointer;
+              text-align: center;
+             text-decoration: none;
+            outline: none;
+           color: #fff;
+          background-color:brown ;
+         border: none;
+        border-radius: 5px;
+       box-shadow: 0 9px #999;
+       padding: 5px 10px;}
